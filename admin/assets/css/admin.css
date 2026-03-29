@@ -1,0 +1,90 @@
+/* ============================================
+   Publiprim Admin Panel Stylesheet
+   ============================================ */
+
+/* --- Sidebar --- */
+.admin-sidebar {
+    width: 250px;
+    min-height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    overflow-y: auto;
+    transition: transform 0.3s ease;
+}
+
+.admin-sidebar .nav-link {
+    border-radius: 0.375rem;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.9rem;
+    transition: background 0.2s ease;
+}
+
+.admin-sidebar .nav-link:hover,
+.admin-sidebar .nav-link.active {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.admin-sidebar .nav-link.active {
+    font-weight: 600;
+}
+
+/* --- Main Content --- */
+.admin-content {
+    margin-left: 250px;
+    min-height: 100vh;
+    background: #f5f6fa;
+}
+
+/* --- Stat Icons --- */
+.stat-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+/* --- Top Product Thumbnails --- */
+.top-product-img {
+    width: 40px;
+    height: 40px;
+    background: #e9ecef;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+/* --- Admin Thumbnails (Tables) --- */
+.admin-thumb {
+    width: 50px;
+    height: 50px;
+    background: #e9ecef;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* --- Admin Category Images --- */
+.admin-category-img {
+    height: 140px;
+    background: linear-gradient(135deg, #e9ecef, #dee2e6);
+}
+
+/* --- Responsive Sidebar --- */
+@media (max-width: 991.98px) {
+    .admin-sidebar {
+        transform: translateX(-100%);
+    }
+
+    .admin-sidebar.show {
+        transform: translateX(0);
+    }
+
+    .admin-content {
+        margin-left: 0;
+    }
+}
