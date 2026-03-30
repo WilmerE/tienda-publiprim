@@ -110,6 +110,24 @@ require_once APP_PATH . '/views/partials/navbar.php';
                                 </div>
                             </div>
                         </div>
+                        <!-- Slide 5 -->
+                        <div class="swiper-slide">
+                            <div class="hero-product-card">
+                                <div class="hero-product-img">
+                                    <span class="hero-product-category">VINIL</span>
+                                    <div class="hero-product-img-placeholder">
+                                        <i class="bi bi-image"></i>
+                                    </div>
+                                </div>
+                                <div class="hero-product-info">
+                                    <h4>Vinil Reflectivo</h4>
+                                    <p class="hero-product-price"><?= CURRENCY ?>150.00</p>
+                                    <a href="product-detail.php?slug=vinil-reflectivo" class="btn btn-hero-card">
+                                        Ver Detalles <i class="bi bi-arrow-right ms-1"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="swiper-pagination hero-pagination"></div>
                 </div>
@@ -119,7 +137,7 @@ require_once APP_PATH . '/views/partials/navbar.php';
     <!-- Scroll indicator -->
     <div class="hero-scroll-indicator">
         <span>SCROLL</span>
-        <div class="scroll-line"></div>
+        <i class="bi bi-mouse"></i>
     </div>
 </section>
 

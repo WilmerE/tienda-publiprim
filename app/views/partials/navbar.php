@@ -41,6 +41,7 @@
             </div>
         </div>
     </div>
+    <hr class="m-0" style="border-color: rgba(255,255,255,0.25); opacity: 1;">
     <!-- Row 2: Navigation -->
     <nav class="navbar navbar-expand-lg py-0" style="background-color: var(--pp-navbar, #21282c);">
         <div class="container">

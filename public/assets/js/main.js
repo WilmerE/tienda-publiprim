@@ -3,18 +3,24 @@
  */
 document.addEventListener('DOMContentLoaded', () => {
 
-    // --- Hero Swiper Carousel ---
+    // --- Hero Swiper Carousel (3D Coverflow) ---
     if (document.querySelector('.hero-swiper')) {
         new Swiper('.hero-swiper', {
-            slidesPerView: 1,
-            spaceBetween: 20,
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 'auto',
             loop: true,
-            autoplay: { delay: 4000, disableOnInteraction: false },
+            speed: 800,
+            autoplay: { delay: 3000, disableOnInteraction: false, pauseOnMouseEnter: true },
+            coverflowEffect: {
+                rotate: 20,
+                stretch: 80,
+                depth: 200,
+                modifier: 1,
+                slideShadows: false
+            },
             pagination: { el: '.hero-pagination', clickable: true },
-            breakpoints: {
-                768: { slidesPerView: 2, spaceBetween: 24 },
-                1200: { slidesPerView: 2, spaceBetween: 30 }
-            }
         });
     }
 

@@ -217,14 +217,24 @@ img {
     color: #fff;
 }
 
-/* --- Hero Product Cards Carousel --- */
+/* --- Hero Product Cards Carousel (3D Coverflow) --- */
 .hero-carousel-col {
     position: relative;
     z-index: 1;
 }
 
 .hero-swiper {
-    padding-bottom: 3rem;
+    padding: 2rem 0 3rem;
+}
+
+.hero-swiper .swiper-slide {
+    width: 300px;
+    background: transparent;
+}
+
+.hero-swiper .swiper-slide-shadow-left,
+.hero-swiper .swiper-slide-shadow-right {
+    display: none !important;
 }
 
 .hero-product-card {
@@ -232,12 +242,11 @@ img {
     border-radius: 1.25rem;
     box-shadow: 0 8px 40px rgba(0, 0, 0, 0.08);
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: box-shadow 0.4s ease;
 }
 
 .hero-product-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 50px rgba(0, 151, 252, 0.15);
+    box-shadow: 0 16px 60px rgba(0, 151, 252, 0.2);
 }
 
 .hero-product-img {
@@ -330,19 +339,20 @@ img {
     font-weight: 700;
     letter-spacing: 3px;
     color: var(--pp-gray);
+    display: block;
 }
 
-.scroll-line {
-    width: 1px;
-    height: 30px;
-    background: var(--pp-gray);
-    margin: 0.5rem auto 0;
+.hero-scroll-indicator .bi-mouse {
+    font-size: 1.5rem;
+    color: var(--pp-gray);
+    display: block;
+    margin-top: 0.4rem;
     animation: scrollPulse 2s ease-in-out infinite;
 }
 
 @keyframes scrollPulse {
-    0%, 100% { opacity: 0.3; height: 20px; }
-    50% { opacity: 1; height: 35px; }
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 1; }
 }
 
 /* ======================
@@ -637,7 +647,8 @@ img {
     .hero-title-bold { font-size: 1.8rem; }
     .hero-title-gradient { font-size: 1.6rem; }
 
-    .hero-product-img { height: 200px; }
+    .hero-swiper .swiper-slide { width: 240px; }
+    .hero-product-img { height: 180px; }
 
     .product-detail-img-placeholder {
         height: 280px;
